@@ -1,3 +1,6 @@
+# Repositório contendo códigos que serão realizados no decorrer do bootcamp de TS da DIO.
+
+
 Instalar o TS globalmente: npm i -g typescript
 
 cria JSON: npm init --y
