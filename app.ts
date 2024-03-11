@@ -2,13 +2,19 @@ import {PeopleAccount} from './class/PeopleAccount'
 import {CompanyAccount} from "./class/CompanyAccount"
 
 
-const newAccount:PeopleAccount = new PeopleAccount(12345678, 'Vinicius', 1)
-
-const newCompany: CompanyAccount = new CompanyAccount('Empresa', 2)
-
-
+const pessoa01: PeopleAccount = new PeopleAccount(12345678, 'Vinicius Alochio', 1)
+pessoa01.deposit(120)
+pessoa01.withdraw(12)
 
 
-newAccount.deposit()
+
+
+
+
+const empresa01: CompanyAccount = new CompanyAccount('Empresa', 2)
+empresa01.deposit(155)
+empresa01.withdraw(101)
+
+
 
 

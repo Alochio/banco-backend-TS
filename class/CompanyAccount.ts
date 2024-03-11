@@ -9,7 +9,4 @@ export class CompanyAccount extends DioAccount{
         console.log('Você pegou um empréstimo')
     }
 
-    deposit = (): void => {
-        console.log('A empresa depositou') //polimorfismo
-    }
 }
