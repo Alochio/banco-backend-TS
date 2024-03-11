@@ -18,9 +18,14 @@ export abstract class DioAccount {
     return this.name;
   };
 
+  setBalance = (valorEntrada:number):number => {
+    this.balance = valorEntrada + this.balance
+    return this.balance
+  }
+
   deposit = (valorDeposito: number): void => {
     if (this.validadeStatus()) {
-      this.balance = this.balance + valorDeposito;
+      this.setBalance(valorDeposito)
       console.log("Deposito realizado!");
       this.getValue();
     }
@@ -55,4 +60,8 @@ export abstract class DioAccount {
 
     throw new Error("Conta inválida");
   };
+
+  getStatus = ():boolean => {
+    return this.status
+  }
 }
