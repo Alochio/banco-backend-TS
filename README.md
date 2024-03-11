@@ -13,3 +13,7 @@ Configurando ambiente de desenvolvimento:
 Iniciando o TS:
     npx tsc --init     -> se aparecer erro no arquivo que é criado, é só dar reload no VS Code
     
+
+
+RODAR:
+    npm run dev
