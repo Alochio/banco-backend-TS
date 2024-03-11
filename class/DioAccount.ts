@@ -1,7 +1,7 @@
 export abstract class DioAccount {
   private name: string;
-  readonly accountNumber: number;
-  balance: number = 0;
+  private readonly accountNumber: number;
+  private balance: number = 0;
   private status: boolean = true;
 
   constructor(name: string, accountNumber: number) {
