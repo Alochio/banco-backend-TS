@@ -1,6 +1,7 @@
-class Account{
+abstract class Account{
     name: string
     accountNumber: number
+    balance: number = 0
 
     constructor(name: string, accountNumber: number){
         this.name = name
@@ -14,13 +15,21 @@ class Account{
     withdraw = () => {
         console.log(this.name + ' - Saque realizado!')
     }
+
+    getValue = () => {
+        console.log('Saldo em conta = ' + this.balance)
+    }
+
 }
 
-const newAccount: Account = new Account('Vinicius', 1)
-//console.log(newAccount)
+class PeopleAccount extends Account{
+    doc_id: number
 
-const secondAccount: Account = new Account('Penha', 2)
-//console.log(secondAccount)
+    constructor(doc_id: number, name: string, accountNumber:number){
+        super(name, accountNumber)
+        this.doc_id = doc_id
+    }
+}
 
-secondAccount.deposit();
-newAccount.withdraw();
+const newAccount:PeopleAccount = new PeopleAccount(12345678, 'Vinicius', 1)
+console.log(newAccount)
